@@ -15,7 +15,7 @@ steps:
         path: /var/run/docker.sock
     commands:
       - echo -n "$${ENV}" > .env
-      - docker compose up --detach
+      - docker compose --project-name=gammafogtypecom up --detach
     environment:
       ENV:
         from_secret: ENV
