@@ -11,7 +11,7 @@ ansible-playbook setup.yml
 
 詳しい構成は [setup.yml](setup.yml) を参照
 
-## Drone Server
+## Drone Server & Runner
 
 Gitea への導入
 : https://docs.drone.io/server/provider/gitea/
