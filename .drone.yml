@@ -14,7 +14,11 @@ steps:
       - name: docker_sock
         path: /var/run/docker.sock
     commands:
+      - echo -n "$${ENV}" > .env
       - docker compose up --detach
+    environment:
+      ENV:
+        from_secret: ENV
 volumes:
   - name: docker_sock
     host:
