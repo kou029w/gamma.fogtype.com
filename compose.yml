@@ -15,6 +15,7 @@ services:
     image: drone/drone:2
     restart: unless-stopped
     environment:
+      DRONE_CRON_INTERVAL: 1m
       DRONE_GITEA_SERVER: ${DRONE_GITEA_SERVER:?}
       DRONE_GITEA_CLIENT_ID: ${DRONE_GITEA_CLIENT_ID:?}
       DRONE_GITEA_CLIENT_SECRET: ${DRONE_GITEA_CLIENT_SECRET:?}
