@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://json.schemastore.org/drone.json
-name: default
+name: deploy
 kind: pipeline
 type: docker
 trigger:
@@ -23,3 +23,26 @@ volumes:
   - name: docker_sock
     host:
       path: /var/run/docker.sock
+---
+name: renovate
+kind: pipeline
+type: docker
+clone:
+  disable: true
+trigger:
+  event:
+    - cron
+  cron:
+    - renovate
+steps:
+  - name: deploy
+    image: renovate/renovate
+    commands:
+      - renovate
+    environment:
+      RENOVATE_PLATFORM: gitea
+      RENOVATE_ENDPOINT: https://git.fogtype.com/api/v1/
+      RENOVATE_AUTODISCOVER: "true"
+      RENOVATE_AUTODISCOVER_FILTER: nebel/*
+      RENOVATE_TOKEN:
+        from_secret: RENOVATE_TOKEN
