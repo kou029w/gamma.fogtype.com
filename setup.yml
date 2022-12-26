@@ -13,6 +13,10 @@
       become: true
       environment:
         GCLOUD_API_KEY: "{{ grafana_gcloud_api_key }}"
+    - ansible.builtin.copy:
+        src: etc/docker/
+        dest: /etc/docker/
+      become: true
     - ansible.builtin.apt_repository:
         filename: docker
         repo: deb [trusted=yes] https://download.docker.com/linux/ubuntu jammy stable
