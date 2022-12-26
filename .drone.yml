@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://json.schemastore.org/drone.json
+name: default
+kind: pipeline
+type: docker
+trigger:
+  event:
+    - push
+  branch:
+    - main
+steps:
+  - name: docker info
+    image: docker
+    volumes:
+      - name: docker_sock
+        path: /var/run/docker.sock
+    commands:
+      - docker info
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
