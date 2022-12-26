@@ -5,7 +5,7 @@
 ## Setup
 
 ```sh
-sudo apt install ansible docker-ce
+sudo apt install ansible
 ansible-playbook setup.yml
 ```
 
