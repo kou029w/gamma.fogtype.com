@@ -8,13 +8,13 @@ trigger:
   branch:
     - main
 steps:
-  - name: docker info
+  - name: deploy
     image: docker
     volumes:
       - name: docker_sock
         path: /var/run/docker.sock
     commands:
-      - docker info
+      - docker compose up --detach
 volumes:
   - name: docker_sock
     host:
