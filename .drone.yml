@@ -32,7 +32,6 @@ clone:
 trigger:
   event:
     - cron
-    - custom
   cron:
     - renovate
 steps:
