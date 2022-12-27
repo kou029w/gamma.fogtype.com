@@ -23,6 +23,8 @@ volumes:
   - name: docker_sock
     host:
       path: /var/run/docker.sock
+node:
+  name: default
 ---
 name: renovate
 kind: pipeline
