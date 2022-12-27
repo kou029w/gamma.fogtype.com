@@ -9,7 +9,7 @@ trigger:
     - main
 steps:
   - name: deploy
-    image: docker@sha256:9586963dcc07a22641bf03c22f43cd7e45b3107df6bf55c92d8c5098b0ac1750
+    image: docker:20.10.22-cli-alpine3.17@sha256:9586963dcc07a22641bf03c22f43cd7e45b3107df6bf55c92d8c5098b0ac1750
     volumes:
       - name: docker_sock
         path: /var/run/docker.sock
@@ -36,7 +36,7 @@ trigger:
     - renovate
 steps:
   - name: renovate
-    image: renovate/renovate@sha256:e596cff2b03113f468bd4a671e29c2f26ed5e0695bfc750cb1ce23be3225d443
+    image: renovate/renovate:34.74.0@sha256:e596cff2b03113f468bd4a671e29c2f26ed5e0695bfc750cb1ce23be3225d443
     commands:
       - renovate
     environment:
