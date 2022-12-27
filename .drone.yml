@@ -2,6 +2,8 @@
 name: deploy
 kind: pipeline
 type: docker
+node:
+  instance: system
 trigger:
   event:
     - push
