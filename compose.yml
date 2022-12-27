@@ -12,7 +12,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
   drone:
-    image: drone/drone:2@sha256:cc327f09ea02d676dee02091b88fbcff7e0d24f0b8841b220b3ba6f9df2e66a4
+    image: drone/drone:2.16.0@sha256:cc327f09ea02d676dee02091b88fbcff7e0d24f0b8841b220b3ba6f9df2e66a4
     restart: unless-stopped
     environment:
       DRONE_CRON_INTERVAL: 1m
@@ -27,7 +27,7 @@ services:
       - drone_data_v2:/data
 
   runner:
-    image: drone/drone-runner-docker:1@sha256:9479ddc50e50c205f4508e2062f7dbc757822c7b05ab93de0b8378d97214279b
+    image: drone/drone-runner-docker:1.8.2@sha256:9479ddc50e50c205f4508e2062f7dbc757822c7b05ab93de0b8378d97214279b
     restart: unless-stopped
     ports:
       - "127.0.0.1:3000:3000"
