@@ -19,8 +19,6 @@ steps:
     environment:
       ENV:
         from_secret: ENV
-node:
-  instance: default
 volumes:
   - name: docker_sock
     host:
