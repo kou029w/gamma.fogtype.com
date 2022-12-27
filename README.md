@@ -1,5 +1,7 @@
 # γ
 
+https://gamma.fogtype.com
+
 [git.fogtype.com](https://git.fogtype.com/) 用 Drone Server & Runner
 
 ## Setup
