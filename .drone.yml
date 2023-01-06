@@ -38,7 +38,7 @@ trigger:
     - renovate
 steps:
   - name: renovate
-    image: renovate/renovate:34.84.1@sha256:a7e1ebd9dbc59401f627c04974c288a123854fd80a65c4083de864b8c5648eeb
+    image: renovate/renovate:34.84.2@sha256:15f55acf4e85ef2b7018e31fb9f6c1afabc81d3bdd1716017f4a85ab30737ab8
     commands:
       - renovate
     environment:
