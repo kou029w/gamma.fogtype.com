@@ -26,7 +26,7 @@ services:
     volumes:
       - drone_data_v2:/data
   runner:
-    image: drone/drone-runner-docker:1.8.2@sha256:9479ddc50e50c205f4508e2062f7dbc757822c7b05ab93de0b8378d97214279b
+    image: drone/drone-runner-docker:1.8.3@sha256:513891eb6c8b920c48266f6881402b9df5e3f7ec874a12cd87146ebfd1105bed
     restart: unless-stopped
     ports:
       - "127.0.0.1:3000:3000"
@@ -38,7 +38,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   system-runner:
-    image: drone/drone-runner-docker:1.8.2@sha256:9479ddc50e50c205f4508e2062f7dbc757822c7b05ab93de0b8378d97214279b
+    image: drone/drone-runner-docker:1.8.3@sha256:513891eb6c8b920c48266f6881402b9df5e3f7ec874a12cd87146ebfd1105bed
     restart: unless-stopped
     ports:
       - "127.0.0.1:5000:3000"
