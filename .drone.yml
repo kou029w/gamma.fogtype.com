@@ -18,6 +18,7 @@ steps:
     commands:
       - echo -n "$${ENV}" > .env
       - docker compose --project-name=gammafogtypecom up --detach
+      - docker image prune --all --filter=until=1d
     environment:
       ENV:
         from_secret: ENV
