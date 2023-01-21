@@ -46,6 +46,6 @@ steps:
       RENOVATE_PLATFORM: gitea
       RENOVATE_ENDPOINT: https://git.fogtype.com/api/v1/
       RENOVATE_AUTODISCOVER: "true"
-      RENOVATE_AUTODISCOVER_FILTER: nebel/*
+      RENOVATE_AUTODISCOVER_FILTER: "nebel/*,!nebel/archive.fogtype.com"
       RENOVATE_TOKEN:
         from_secret: RENOVATE_TOKEN
